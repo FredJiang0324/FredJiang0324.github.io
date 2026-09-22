@@ -1,0 +1,170 @@
+%------------------------
+% CV – Dongming Jiang
+% JOB-SEARCH VERSION — optimized for research-intern applications
+% Emphasis: concrete technical contributions, skills, publications.
+% Service trimmed; leadership rhetoric replaced with measurable work.
+%------------------------
+
+\documentclass[a4paper,10pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{a4paper, margin=0.8in}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{changepage}
+
+% Color palette
+\definecolor{accent}{HTML}{1F3864}
+\definecolor{link}{HTML}{2A6EBB}
+
+\hypersetup{colorlinks=true, urlcolor=link, linkcolor=link, citecolor=link}
+
+\linespread{1.06}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}{}{0em}{}[{\color{accent}\titlerule[1pt]}]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{accent!85}}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=3pt, topsep=3pt, parsep=0pt}
+
+\newcommand{\me}{\textbf{Dongming Jiang}}
+
+\newcommand{\pub}[4]{%
+  \par\vspace{5pt}\noindent
+  \begin{minipage}[t]{0.15\textwidth}\raggedright\footnotesize\textcolor{link}{\textbf{#1}}\end{minipage}%
+  \hspace{0.015\textwidth}%
+  \begin{minipage}[t]{0.825\textwidth}%
+    \textcolor{link}{\textbf{#2}}\par
+    {\small #3}\par
+    {\small\itshape #4}%
+  \end{minipage}\par
+}
+
+\newcommand{\role}[3]{%
+  \noindent{\bfseries #1} \hfill {\color{accent!80}#3}\\
+  {\itshape #2}\par\vspace{2pt}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+%========================
+% Header
+%========================
+\begin{center}
+  {\Huge\bfseries\color{accent} Dongming Jiang}\\[6pt]
+  {\large Ph.D. Candidate, Computer Science --- The University of Texas at Dallas}\\[5pt]
+  \href{mailto:dxj220001@utdallas.edu}{dxj220001@utdallas.edu} \;\textbar\;
+  \href{https://github.com/FredJiang0324}{GitHub} \;\textbar\;
+  \href{https://scholar.google.com/citations?user=FZLU_acAAAAJ&hl=en}{Google Scholar} \;\textbar\;
+  \href{https://www.semanticscholar.org/author/Dongming-Jiang/2385444978}{Semantic Scholar}
+\end{center}
+\vspace{4pt}
+
+%========================
+% Research Interests
+%========================
+\section*{Research Interests}
+AI systems and machine learning infrastructure: agentic memory architectures, retrieval systems (disk-based approximate nearest neighbor search), reinforcement learning for dynamic graph evolution, and foundation models for scientific computing (PDE solvers). Interested in building scalable, reliable, full-stack AI systems.
+
+%========================
+% Education
+%========================
+\section*{Education}
+\role{Ph.D. in Computer Science, The University of Texas at Dallas}{Advisor: Dr. Bingzhe Li}{Aug 2024 -- Present}
+\role{M.S. in Computer Science, Rice University}{}{Aug 2022 -- Jan 2024}
+\role{B.Eng. in Computer Science and Technology, Hangzhou Dianzi University}{}{Sep 2018 -- Jul 2022}
+
+%========================
+% Technical Skills  (PROMINENT — recruiters scan early)
+%========================
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Languages:} Python, C++, C, CUDA, Java, Bash, SQL
+  \item \textbf{ML Frameworks:} PyTorch, TensorFlow, Hugging Face Transformers, scikit-learn
+  \item \textbf{Systems \& Tools:} Linux, Git, CMake, Docker, SLURM, LaTeX, OpenMP, MPI
+\end{itemize}
+
+%========================
+% Research Experience
+%========================
+\section*{Research Experience}
+\role{Graduate Research Assistant, The University of Texas at Dallas}{Department of Computer Science}{Aug 2024 -- Present}
+\begin{itemize}
+  \item \textbf{Agentic memory architectures:} Designed MAGMA, a multi-graph agentic memory system for LLM agents (ACL 2026, first author), and HAGE, an RL-driven weighted graph-evolution memory module (under review, first author).
+  \item \textbf{Empirical analysis \& benchmarking:} Built a taxonomy and empirical study of agentic-memory systems, designing evaluation benchmarks with adversarial question categories to expose system limitations (under review, first author).
+  \item \textbf{Retrieval systems:} Contributed to a scalable disk-based approximate nearest neighbor search system with a page-aligned graph index (under review).
+  \item \textbf{Foundation models for scientific computing:} Contributed to PDE foundation models for 3D-IC thermal simulation (DAC 2026) and PDEAgent-Bench, a benchmark for PDE solver generation.
+  \item Research supported by multiple U.S. National Science Foundation (NSF) awards.
+\end{itemize}
+
+%========================
+% Publications
+%========================
+\section*{Selected Publications}
+{\small\color{accent!75} Name in bold is the author. $^{*}$ marks first author; multiple starred names share equal (co-first) contribution. $^{\dagger}$ corresponding author. (Google Scholar: 60+ citations, h-index 4.)}
+\vspace{4pt}
+
+\subsection*{Peer-Reviewed (Accepted / Published)}
+  \pub{[ACL'26]}{MAGMA: A Multi-Graph-based Agentic Memory Architecture for AI Agents}
+      {\me$^{*}$, Yi Li, Guanpeng Li, Bingzhe Li}
+      {Annual Meeting of the Association for Computational Linguistics (Main Conference)}
+
+  \pub{[ICLR'26]}{Adaptive Debiasing Tsallis Entropy for Test-Time Adaptation}
+      {Xiangyu Wu$^{*}$, \me$^{*}$, F. Yu, Y. Tian, J. Tang, Q.-G. Chen, Y. Yang, J. Lu}
+      {International Conference on Learning Representations}
+
+
+  \pub{[DAC'26]}{From Fluid Dynamics to Chip Design: PDE Foundation Models Address Data Bottlenecks in 3D-IC Thermal Simulation}
+      {Z. Huang$^{*}$, X. HaiYang$^{*}$, \me$^{*}$, Y. Wei, H. Wang, W. Yang, Y. Zhang, et al.}
+      {Design Automation Conference}
+
+
+  \pub{[ICMR'26]}{Learning Where to Embed: Noise-Aware Positional Embedding for Query Retrieval in Small-Object Detection}
+      {Y. Zeng, Z. Yu, \me, W. Zhang, Y. Hong, Z. Hu, J. Luo, K. Cui}
+      {International Conference on Multimedia Retrieval}
+
+\subsection*{Preprints / Under Review}
+
+
+  \pub{[Under Review]}{Anatomy of Agentic Memory: Taxonomy and Empirical Analysis of Evaluation and System Limitations}
+      {\me$^{*\dagger}$, Yi Li, Songtao Wei, Jinxin Yang, Ayushi Kishore, Alysa Zhao, Dingyi Kang, Xu Hu, Feng Chen, et al.}
+      {Preprint}
+
+  \pub{[Under Review]}{HAGE: Harnessing Agentic Memory via RL-Driven Weighted Graph Evolution}
+      {\me$^{*}$, Yi Li, Guanpeng Li, Qiannan Li, Bingzhe Li}
+      {Preprint}
+
+  \pub{[Under Review]}{PDEAgent-Bench: A Multi-Metric, Multi-Library Benchmark for PDE Solver Generation}
+      {Zhen Hang$^{*}$, Yushan Yashengjiang$^{*}$, et al. (incl. \me; corresponding author Hong Wang)}
+      {Preprint}
+
+  \pub{[Under Review]}{DarkForest: Less Talk, Higher Accuracy for Multi-Agent LLMs}
+      {Yi Li, Songtao Wei, \me, Zhichun Guo, Qiannan Li, Bingzhe Li}
+      {Preprint}
+
+  \pub{[Under Review]}{Scalable Disk-Based Approximate Nearest Neighbor Search with Page-Aligned Graph}
+      {Dingyi Kang, \me, H. Yang, H. Liu, Bingzhe Li}
+      {Preprint}
+
+%========================
+% Selected Service  (TRIMMED for job search)
+%========================
+\section*{Selected Academic Service}
+\begin{itemize}
+  \item \textbf{Peer reviews} across AI/ML, systems, and architecture venues.
+  \item Reviewer / PC: NeurIPS, ICLR, ICML, CVPR, TMLR, ICCAD, OSDI (Artifact Evaluation), PEARC, MMM, \textit{IEEE Security \& Privacy}.
+\end{itemize}
+
+\end{document}

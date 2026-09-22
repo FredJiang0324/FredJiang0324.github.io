@@ -1,0 +1,24 @@
+# NOTE: comments must be on their own line. A "#" after a pattern is
+# treated as part of the pattern, not as a comment.
+
+# LaTeX build artefacts
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+cv/*.xdv
+
+# CV build output; the published copy is assets/Dongming_Jiang_CV.pdf
+cv/cv.pdf
+
+# Local documentation; not needed to build or serve the site
+README.md
+
+# Editor / OS state
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
