@@ -212,6 +212,13 @@ a:hover { color: var(--navy); text-decoration-thickness: 2px; }
 
 .site-nav { margin-top: 22px; }
 
+/* Visitor map widget (third-party; caps its self-computed width) */
+
+.visitor-map {
+  margin-top: 24px;
+  max-width: 264px;
+}
+
 .nav-list {
   list-style: none;
   margin: 0;

@@ -170,7 +170,11 @@
         <li><a href="#service">Service</a></li>
       </ul>
 </nav>
-<script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=8KXTZK1r24fOi3s9iefnUXkB3uQELUeUR5PFBqIwSMg"></script>
+    <!-- Visitor map (MapMyVisitors). map.js requires the id, and sizes the map
+         to this wrapper's width, which caps it on narrow screens. -->
+    <div class="visitor-map" aria-hidden="true">
+      <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=ffffff&amp;w=a&amp;t=n&amp;d=gJuq3F3lF217X43bfDTOCn0Wv3MLmmzRhXIFU-bvkDc"></script>
+    </div>
 </aside>
 
   <!-- ==================== Main ==================== -->
@@ -203,7 +207,7 @@
       <div class="cards">
 
         <!-- 1. Jev-Mem -->
-        <article class="card card--lead" aria-labelledby="c-jevmem">
+        <article class="card" aria-labelledby="c-jevmem">
           <div class="card-head">
             <h3 class="card-title" id="c-jevmem">
               Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents
@@ -213,24 +217,8 @@
 
           <p class="card-desc">
             A System-One-controlled agentic memory architecture that moves frequent
-            structured memory decisions out of the autoregressive generation loop while
-            reserving System-Two language models for deeper reasoning and answer synthesis.
-          </p>
-
-          <figure class="card-figure">
-            <img src="assets/jev-mem-architecture.png" width="1600" height="740" loading="lazy" decoding="async"
-                 alt="Jev-Mem architecture in three stages. Write: an observation passes through Jev typing, candidate search, and Jev relation judgements before being inserted into memory. Memory Plane: a shared vector and keyword index backs semantic, temporal, causal, and entity graph views, with a consolidation process. Retrieve: a query is routed by Jev, resolved to anchors, then loops through evidence checking, expansion, and Jev scoring until it stops and hands the selected evidence to a System Two model that produces the answer.">
-            <figcaption>
-              Architecture figure from the
-              <a href="https://github.com/libingzheren/Jev-Mem" target="_blank" rel="noopener noreferrer">Jev-Mem repository</a>
-              (MIT licensed), reproduced here with attribution.
-            </figcaption>
-          </figure>
-
-          <p class="card-result">
-            Reported experimental results on LoCoMo with GPT-4o-mini:
-            <strong>0.777</strong> overall score, <strong>158&nbsp;s</strong> memory
-            construction, and <strong>0.93&nbsp;s</strong> average query latency.
+            structured memory decisions out of the generation loop, reserving language
+            models for deeper reasoning and answer synthesis.
           </p>
 
           <ul class="links">
